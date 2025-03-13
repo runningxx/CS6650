@@ -6,14 +6,14 @@ import java.io.IOException;
 import java.util.concurrent.*;
 
 public class ApiClient {
-  private static final String BASE_URL = "http://54.189.206.0:8080/SkiLiftServer-1.0-SNAPSHOT";
+  private static final String BASE_URL = "http://44.232.3.127:8080/SkiLiftServer-1.0-SNAPSHOT";
   private static ApiClient instance;
   private final OkHttpClient httpClient;
   private final Gson gson;
 
   private ApiClient() {
     this.httpClient = new OkHttpClient.Builder()
-        .connectionPool(new ConnectionPool(50, 5, TimeUnit.MINUTES)) // 🔹 扩大连接池
+        .connectionPool(new ConnectionPool(50, 5, TimeUnit.MINUTES))
         .connectTimeout(30, TimeUnit.SECONDS)
         .readTimeout(30, TimeUnit.SECONDS)
         .writeTimeout(30, TimeUnit.SECONDS)

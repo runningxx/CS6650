@@ -13,7 +13,7 @@ public class ApiClient {
 
   private ApiClient() {
     this.httpClient = new OkHttpClient.Builder()
-        .connectionPool(new ConnectionPool(50, 5, TimeUnit.MINUTES)) // 🔹 扩大连接池
+        .connectionPool(new ConnectionPool(50, 5, TimeUnit.MINUTES))
         .connectTimeout(30, TimeUnit.SECONDS)
         .readTimeout(30, TimeUnit.SECONDS)
         .writeTimeout(30, TimeUnit.SECONDS)
